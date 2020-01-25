@@ -58,3 +58,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+#Get git remote url:
+git config --get remote.origin.url
+
+#Set new git remote url:
+git remote set-url origin https://github.com/ernez/Angular-Springboot.git

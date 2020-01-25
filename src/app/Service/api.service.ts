@@ -122,7 +122,8 @@ export class ApiService {
     formData.append("quantity", quan);
     formData.append("file", image);
 
-    const myheader = new HttpHeaders().set('AUTH_TOKEN', auth);
+    let myheader = new HttpHeaders();
+    myheader.append('AUTH_TOKEN', auth);
     return this.http.post<any>(this.ADD_PRD_API, formData, { headers: myheader });
 
   }
@@ -170,7 +171,7 @@ export class ApiService {
 
   }
 
-  // Authentication Methods 
+  // Authentication Methods
 
   public isAuthenticated(): boolean {
     return this.getToken() !== null;
